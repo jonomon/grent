@@ -1,18 +1,5 @@
-<%= form_for :event do |f| %>
+<%= simple_form_for :event do |f| %>
 <p>
-  <%= f.label "Event Name" %><br>
-  <%= f.text_field :name %><br>
-  <%= f.label "From:" %>
-  <%= f.label "To:" %><br>
-  <%= f.datetime_field :from %>
-  <%= f.datetime_field :till %><br>
-  <%= f.label "Username" %><br>
-  <%= f.text_field :user %><br>
-</p>
-<p>
-  <%= f.label "Repitition" %><br>
-</p>
-<p>
-  <%= f.submit %>
+  <%= f.input :from, :as => :datetime_picker %>
 </p>
 <% end %>

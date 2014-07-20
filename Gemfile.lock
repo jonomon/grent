@@ -3,6 +3,7 @@ PATH
   specs:
     grent (0.0.1)
       rails (~> 4.0.0)
+      simple_form
 
 GEM
   remote: https://rubygems.org/
@@ -64,6 +65,9 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sprockets (2.12.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -86,7 +90,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap3-datetimepicker-rails (~> 3.0.0.2)
+  bootstrap3-datetimepicker-rails
   grent!
   momentjs-rails (>= 2.5.0)
+  simple_form
   sqlite3
