@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     grent (0.0.1)
+      bootstrap3-datetimepicker-rails
+      momentjs-rails
       rails (~> 4.0.0)
       simple_form
 

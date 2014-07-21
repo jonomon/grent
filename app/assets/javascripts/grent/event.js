@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(function () {
-    $('#datetimepicker1').datetimepicker({
+    $('.form_datetime').datetimepicker({
 	pickTime: false
     });
 });

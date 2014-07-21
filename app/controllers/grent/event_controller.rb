@@ -10,9 +10,9 @@ class Grent::EventController < ApplicationController
   end
 
   def create
-    # @event = Events.new(event_params)
-    # @event.save
-    # redirect_to @event
+    @event = Grent::Event.new()
+    @event.save
+    redirect_to action: "calendar"
   end
   
   def timeline
@@ -20,10 +20,12 @@ class Grent::EventController < ApplicationController
 
   private
   def event_params
-    # title = params[:post][:title]
-    # text = params[:post][:text]
-    # postTypeID = params[:post][:postType]
-    # postType = PostType.find(postTypeID) .postTypeString
-    # return {title: title, text: text, postType: postType}
+    name = params[:event][:name]
+    from = params[:event][:from]
+    till = params[:event][:till]
+    user = params[:event][:user]
+    repetition = params[:event][:repetition]
+    
+    return {name: name, from: from, till: till, user: user, repetition: repetition}
   end
 end

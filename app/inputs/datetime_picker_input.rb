@@ -3,16 +3,26 @@ class DatetimePickerInput < SimpleForm::Inputs::StringInput
     def input
       input_html_classes.unshift("form-control")
       input_html_options[:type] = "text"
-      
-      input_group = @builder.text_field(attribute_name, input_html_options) +
-        template.content_tag(:span,
-            template.content_tag(:span, "", class: "glyphicon glyphicon-calendar"), class: "input-group-addon")
-      
-      output_group = template.content_tag(
-                                          :div, input_group,
-                                          class: "input-group data",
-                                          id: "datetimepicker1")
 
-      template.content_tag(:div, output_group, class: "form-group")
+        template.content_tag(:div, class: "row") do
+          template.content_tag(:div, class: "col-sm-3") do
+            template.content_tag(:div, class: "form-group ") do
+              template.concat(inner_group)
+            end
+          end
+      end
+    end
+
+    def inner_group
+      template.content_tag(:div, class: "input-group data form_datetime") do
+        template.concat(@builder.text_field(attribute_name, input_html_options))
+        template.concat(span_table)
+      end
+    end
+    
+    def span_table
+      template.content_tag(:span, class: "input-group-addon") do
+         template.content_tag(:span, "", class: "glyphicon glyphicon-calendar")
+      end
     end
 end

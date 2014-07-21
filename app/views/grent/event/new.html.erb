@@ -1,5 +1,11 @@
 <%= simple_form_for :event do |f| %>
 <p>
-  <%= f.input :from, :as => :datetime_picker %>
+  <%= f.input :name, label: "Event name" %>
+  <%= f.input :from, as: :datetime_picker, label: "From" %>
+  <%= f.input :till, as: :datetime_picker, label: "Till" %>
+  <%= f.input :user, label: "Username" %>
+  <%= f.input :repetition,
+      collection: ["Once", "Weekly", "Montly", "Annual"] %>
+  <%= f.button :submit %>
 </p>
 <% end %>
