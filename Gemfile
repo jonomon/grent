@@ -15,6 +15,8 @@ gemspec
 
 gem 'sqlite3'
 
+gem 'jquery-rails'
+
 gem 'simple_form'
 
 gem 'momentjs-rails', '>= 2.5.0'

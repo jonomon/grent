@@ -6,8 +6,7 @@ A ruby engine to create a gantt chart and calendar for project management
 Installation
 -------------
 
-To install this gem
-place
+To install this gem place
 
 ```
 gem 'grent'
@@ -24,3 +23,7 @@ mount Grent:Engine, at: "your desired location"
 ```
 
 Change your links and navigation bars accordingly
+
+
+note that bootstrap must be installed in your application 
+(http://www.erikminkel.com/2013/09/01/twitter-bootstrap-3-in-a-rails-4-application/)

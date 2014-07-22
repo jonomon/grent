@@ -3,6 +3,7 @@ require_dependency "grent/application_controller"
 class Grent::EventController < ApplicationController
   layout "layouts/grent/grent_layout"
   def calendar
+    @events = Grent::Event.all
   end
 
   def new
