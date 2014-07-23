@@ -3,6 +3,7 @@ class DatetimePickerInput < SimpleForm::Inputs::StringInput
     def input
       input_html_classes.unshift("form-control")
       input_html_options[:type] = "text"
+      input_html_options[:style] = "height:30px"
 
         template.content_tag(:div, class: "row") do
           template.content_tag(:div, class: "col-sm-3") do
